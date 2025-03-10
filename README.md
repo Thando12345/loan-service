@@ -68,7 +68,7 @@ Represents a repayment made by a user:
 ### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/loan-service.git
+git clone https://github.com/Thando12345/loan-service.git
 cd loan-service
 ```
 
