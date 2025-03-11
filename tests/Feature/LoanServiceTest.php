@@ -22,7 +22,7 @@ class LoanServiceTest extends TestCase
         parent::setUp();
         
         // Ensure the SQLite database file is created
-        if (!file_exists(database_path('database.sqlite'))) {
+        if (file_exists(database_path('database.sqlite')) === false) {
             touch(database_path('database.sqlite'));
         }
         
