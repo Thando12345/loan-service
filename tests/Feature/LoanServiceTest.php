@@ -20,6 +20,15 @@ class LoanServiceTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+        
+        // Ensure the SQLite database file is created
+        if (!file_exists(database_path('database.sqlite'))) {
+            touch(database_path('database.sqlite'));
+        }
+        
+        // Run the migrations
+        $this->artisan('migrate');
+        
         $this->loanService = new LoanService();
         $this->user = User::factory()->create();
     }
